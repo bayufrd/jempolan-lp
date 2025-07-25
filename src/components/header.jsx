@@ -1,6 +1,27 @@
 import React from "react";
+import { 
+  FaInstagram, FaTiktok, FaFacebook, 
+  FaUtensils, FaMotorcycle, FaMap, 
+  FaStore, FaCalendarAlt, FaLink 
+} from 'react-icons/fa';
+
+// Mapping icon names to actual icon components
+const iconMap = {
+  FaInstagram: FaInstagram,
+  FaTiktok: FaTiktok,
+  FaFacebook: FaFacebook,
+  FaUtensils: FaUtensils,
+  FaMotorcycle: FaMotorcycle,
+  FaMap: FaMap,
+  FaStore: FaStore,
+  FaCalendarAlt: FaCalendarAlt,
+  FaLink: FaLink
+};
 
 export const Header = (props) => {
+  // Safely extract data or use default empty arrays
+  const socialLinks = props.data?.socialLinks || [];
+  const serviceLinks = props.data?.serviceLinks || [];
   return (
     <header id="header">
       <div className="intro">
@@ -13,12 +34,51 @@ export const Header = (props) => {
                   <span></span>
                 </h1>
                 <p>{props.data ? props.data.paragraph : "Loading"}</p>
-                <a
+                {/* Service Links Section */}
+                {/* <div className="service-links">
+                  {serviceLinks.map((link, index) => {
+                    // Get the icon component dynamically
+                    const IconComponent = iconMap[link.icon];
+                    return (
+                      <a
+                        key={index}
+                        href={link.url}
+                        className="btn btn-custom btn-sm service-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {IconComponent && <IconComponent />}
+                        <span className="link-label">{link.label}</span>
+                      </a>
+                    );
+                  })}
+                </div> */}
+
+                {/* Social Links Section */}
+                <div className="social-links mt-3">
+                  {socialLinks.map((link, index) => {
+                    // Get the icon component dynamically
+                    const IconComponent = iconMap[link.icon];
+                    return (
+                      <a
+                        key={index}
+                        href={link.url}
+                        className="btn btn-social btn-sm"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {IconComponent && <IconComponent />}
+                      </a>
+                    );
+                  })}
+                </div>
+                {/* <a
                   href="#features"
                   className="btn btn-custom btn-lg page-scroll"
                 >
                   Learn More
-                </a>{" "}
+                </a>{" "} */}
+
               </div>
             </div>
           </div>

@@ -1,7 +1,56 @@
 {
   "Header": {
     "title": "Welcome #sobatjeco",
-    "paragraph": "Operational Hours: Mon-Sun 09.00 - 23.59 & Fri 13.00 - 23.59"
+    "paragraph": "Operational Hours: Mon-Sun 09.00 - 23.59 & Fri 13.00 - 23.59",
+    "socialLinks": [
+      {
+        "icon": "FaInstagram",
+        "label": "Instagram",
+        "url": "https://instagram.com/jempolancoffee"
+      },
+      {
+        "icon": "FaTiktok", 
+        "label": "TikTok",
+        "url": "https://tiktok.com/@jempolancoffee"
+      },
+      {
+        "icon": "FaFacebook",
+        "label": "Facebook", 
+        "url": "https://www.facebook.com/jempolancoffee/"
+      }
+    ],
+    "serviceLinks": [
+      {
+        "icon": "FaMotorcycle",
+        "label": " GOFOOD",
+        "url": "https://gofood.link/a/DEJXBvS"
+      },
+      {
+        "icon": "FaMotorcycle",
+        "label": " GRABFOOD", 
+        "url": "https://food.grab.com/id/id/restaurant/jempolan-coffee-and-eatery-condong-catur-delivery/6-C3DTN7MXV7D2LN"
+      },
+      {
+        "icon": "FaMotorcycle",
+        "label": " SHOPEEFOOD",
+        "url": "https://shopee.co.id/universal-link/now-food/shop/20369347?deep_and_deferred=1&share"
+      },
+      {
+        "icon": "FaCalendarAlt",
+        "label": " RESERVASI",
+        "url": "https://wa.me/6281703115758"
+      },
+      {
+        "icon": "FaStore",
+        "label": " OUR PLACE",
+        "url": "https://goo.gl/maps/Y3DEH1KuKu4TnJop8"
+      },
+      {
+        "icon": "FaUtensils",
+        "label": " OUR MENU",
+        "url": "https://drive.google.com/file/d/1gxRfLNcexlkLdUkqnqEtESOqJpltgI4o/view?usp=sharing"
+      }
+    ]
   },
   "About": {
     "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -20,47 +69,47 @@
   },
   "Gallery": [
     {
-      "title": "Project Title",
+      "title": "Gallery Jempolan",
       "largeImage": "img/portfolio/01-large.jpg",
       "smallImage": "img/portfolio/01-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Gallery Jempolan",
       "largeImage": "img/portfolio/02-large.jpg",
       "smallImage": "img/portfolio/02-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Gallery Jempolan",
       "largeImage": "img/portfolio/03-large.jpg",
       "smallImage": "img/portfolio/03-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Gallery Jempolan",
       "largeImage": "img/portfolio/04-large.jpg",
       "smallImage": "img/portfolio/04-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Gallery Jempolan",
       "largeImage": "img/portfolio/05-large.jpg",
       "smallImage": "img/portfolio/05-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Gallery Jempolan",
       "largeImage": "img/portfolio/06-large.jpg",
       "smallImage": "img/portfolio/06-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Gallery Jempolan",
       "largeImage": "img/portfolio/07-large.jpg",
       "smallImage": "img/portfolio/07-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Gallery Jempolan",
       "largeImage": "img/portfolio/08-large.jpg",
       "smallImage": "img/portfolio/08-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Gallery Jempolan",
       "largeImage": "img/portfolio/09-large.jpg",
       "smallImage": "img/portfolio/09-small.jpg"
     }
