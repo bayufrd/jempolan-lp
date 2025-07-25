@@ -1,5 +1,5 @@
-import { Image } from "./image";
 import React from "react";
+import { Image } from "./image";
 
 export const Gallery = (props) => {
   return (
@@ -7,27 +7,21 @@ export const Gallery = (props) => {
       <div className="container">
         <div className="section-title">
           <h2>Gallery</h2>
-          <p>
-          Satu Tempat, Sejuta Cerita #SOBATJECO
-          </p>
+          <p>Satu Tempat, Sejuta Cerita #SOBATJECO</p>
         </div>
-        <div className="row">
-          <div className="portfolio-items">
-            {props.data
-              ? props.data.map((d, i) => (
-                  <div
-                    key={`${d.title}-${i}`}
-                    className="col-sm-6 col-md-4 col-lg-4"
-                  >
-                    <Image
-                      title={d.title}
-                      largeImage={d.largeImage}
-                      smallImage={d.smallImage}
-                    />
-                  </div>
-                ))
-              : "Loading..."}
-          </div>
+        <div className="portfolio-items">
+          {props.data && props.data.length > 0 ? (
+            props.data.map((d, i) => (
+              <Image
+                key={`${d.title}-${i}`}
+                title={d.title}
+                largeImage={d.largeImage}
+                smallImage={d.smallImage}
+              />
+            ))
+          ) : (
+            <div>Loading...</div>
+          )}
         </div>
       </div>
     </div>

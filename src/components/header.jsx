@@ -34,26 +34,6 @@ export const Header = (props) => {
                   <span></span>
                 </h1>
                 <p>{props.data ? props.data.paragraph : "Loading"}</p>
-                {/* Service Links Section */}
-                {/* <div className="service-links">
-                  {serviceLinks.map((link, index) => {
-                    // Get the icon component dynamically
-                    const IconComponent = iconMap[link.icon];
-                    return (
-                      <a
-                        key={index}
-                        href={link.url}
-                        className="btn btn-custom btn-sm service-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {IconComponent && <IconComponent />}
-                        <span className="link-label">{link.label}</span>
-                      </a>
-                    );
-                  })}
-                </div> */}
-
                 {/* Social Links Section */}
                 <div className="social-links mt-3">
                   {socialLinks.map((link, index) => {
@@ -63,7 +43,7 @@ export const Header = (props) => {
                       <a
                         key={index}
                         href={link.url}
-                        className="btn btn-social btn-sm"
+                        className="btn-social"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -72,13 +52,6 @@ export const Header = (props) => {
                     );
                   })}
                 </div>
-                {/* <a
-                  href="#features"
-                  className="btn btn-custom btn-lg page-scroll"
-                >
-                  Learn More
-                </a>{" "} */}
-
               </div>
             </div>
           </div>

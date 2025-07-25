@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const Image = ({ title, largeImage, smallImage }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="portfolio-item">
-      <div className="hover-bg">
-        {" "}
-        <a href={largeImage} title={title} data-lightbox-gallery="gallery1">
-          <div className="hover-text">
-            <h4>{title}</h4>
-          </div>
-          <img src={smallImage} className="img-responsive" alt={title} />{" "}
-        </a>{" "}
+    <div 
+      className="portfolio-item"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <img 
+        src={smallImage} 
+        alt={title} 
+        className="img-responsive" 
+      />
+      <div className="image-overlay">
+        <h4>{title}</h4>
       </div>
     </div>
   );
