@@ -1,11 +1,13 @@
 // backend/server.js
+const crypto = require('crypto');
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const database = require('./database');
+require('dotenv').config();
 
 const app = express();
-const port = 5000;
+const port = process.env.BACKEND_PORT || 5000;
 
 // Middleware
 app.use(cors());
@@ -13,6 +15,64 @@ app.use(bodyParser.json());
 
 // Buat koneksi database
 const db = database.createDatabaseConnection();
+database.initializeSettingsTable(db);
+
+// Endpoint untuk verifikasi password
+app.post('/api/verify-password', async (req, res) => {
+  try {
+    const { password } = req.body;
+    const isValid = await database.checkPassword(db, password);
+    
+    res.json({ 
+      isValid,
+      message: isValid ? 'Password benar' : 'Password salah' 
+    });
+  } catch (error) {
+    res.status(500).json({ 
+      message: 'Gagal memverifikasi password',
+      error: error.message 
+    });
+  }
+});
+
+// Modifikasi endpoint settings
+app.get('/api/settings', async (req, res) => {
+  try {
+    const settings = await database.getSettings(db);
+    res.json(settings);
+  } catch (error) {
+    res.status(500).json({ 
+      message: 'Gagal mengambil pengaturan',
+      error: error.message 
+    });
+  }
+});
+
+app.put('/api/settings', async (req, res) => {
+  try {
+    const result = await database.updateSettings(db, req.body);
+    res.json(result);
+  } catch (error) {
+    res.status(400).json({ 
+      message: 'Gagal memperbarui pengaturan',
+      error: error.message 
+    });
+  }
+});
+
+app.post('/api/reset-password', async (req, res) => {
+  try {
+    await database.resetToDefaultPassword(db);
+    res.json({ 
+      message: 'Password berhasil direset ke default' 
+    });
+  } catch (error) {
+    res.status(500).json({ 
+      message: 'Gagal mereset password',
+      error: error.message 
+    });
+  }
+});
 
 // Endpoint untuk menyimpan review
 app.post('/api/reviews', async (req, res) => {

@@ -30,7 +30,7 @@ export const Services = ({ data }) => {
       <div className="container">
         <div className="section-title">
           <h2>Our Services</h2>
-          <p>Explore our range of services and offerings</p>
+          <p>Berbagai Layanan, Satu Tujuan</p>
         </div>
         <div className="services-flex-container">
           {serviceLinks.map((link, index) => {

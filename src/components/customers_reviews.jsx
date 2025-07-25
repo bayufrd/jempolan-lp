@@ -153,7 +153,7 @@ export const CustomerReview = () => {
   };
 
   return (
-    <section id="customer-reviews">
+    <section id="reviews">
       <div className="container">
         <div className="section-title text-center">
           <h2>Kepuasan <span>Pelanggan</span></h2>

@@ -50,6 +50,11 @@ export const Navigation = (props) => {
               </a>
             </li>
             <li>
+              <a href="#reviews" className="page-scroll">
+                Reviews
+              </a>
+            </li>
+            <li>
               <a href="https://drive.google.com/drive/folders/18HyNiLFo-nyWd_AK3WrlGMznzMG2005W?usp=sharing" className="page-scroll" target="_blank">
                 Lowker
               </a>
