@@ -2,8 +2,8 @@ module.exports = {
     apps: [
       {
         name: "jempolan-fe",
-        script: "react-scripts",
-        args: "start",
+        script: "npm",
+        args: "run build && npx serve -s build",
         env: {
           PORT: 1234,
           REACT_APP_API_URL: "https://jempolan-be.gaspollmanagementcenter.com/api"
@@ -16,7 +16,8 @@ module.exports = {
       },
       {
         name: "jempolan-be",
-        script: "backend/server.js",
+        script: "node",
+        args: "backend/server.js",
         env: {
           PORT: 5000,
           BACKEND_PORT: 5000
