@@ -126,12 +126,6 @@ export const Footer = () => {
                 />
                 {errors.password && <span className="error-message">{errors.password}</span>}
               </div>
-              {/* <button
-                className="btn btn-warning"
-                onClick={handleResetPassword}
-              >
-                Reset Password (Debug)
-              </button> */}
             </div>
             <div className="modal-footer">
               <button
@@ -282,7 +276,17 @@ export const Footer = () => {
               <p>
                 <FaCopyright /> {new Date().getFullYear()}
                 {' '}
-                <span onClick={toggleModal} className="settings-link">Kerja Kelompok</span> X Dastrevas.
+                <span
+                  onClick={toggleModal}
+                  style={{
+                    color: '#333',
+                    textDecoration: 'none',
+                    cursor: 'pointer'
+                  }}
+                  className="settings-link"
+                >
+                  Kerja Kelompok
+                </span> X Dastrevas.
                 All Rights Reserved.
               </p>
             </div>

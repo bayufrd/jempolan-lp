@@ -1646,3 +1646,56 @@ input:checked:hover+.slider {
     right: -10px;
   }
 }
+
+#page-scroll
+/* styles.css atau App.css */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+  overflow-x: hidden; /* Mencegah horizontal scrolling */
+}
+
+body {
+  overscroll-behavior-y: contain; /* Mencegah bounce effect */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling di iOS */
+  scroll-behavior: smooth;
+}
+
+.page-scroll {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.page-scroll::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #007bff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.page-scroll:hover::after {
+  transform: scaleX(1);
+}
+
+.page-scroll:focus {
+  outline: none;
+  color: #007bff;
+}
+
+/* Responsif dan aksesibilitas */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  .page-scroll {
+    transition: none;
+  }
+}
