@@ -1,6 +1,6 @@
 {
   "name": "jempolan-lp",
-  "homepage": "https://jempolan.gaspollmanagementcenter.com",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -22,8 +22,9 @@
   "scripts": {
     "start:frontend": "react-scripts start",
     "start:backend": "node backend/server.js",
-    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
-    "build": "react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "serve": "serve -s build -l 1234",
+    "start:production": "npm run build && npm run serve",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

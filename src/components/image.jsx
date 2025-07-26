@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export const Image = ({ title, largeImage, smallImage }) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [setIsHovered] = useState(false);
 
   return (
     <div 

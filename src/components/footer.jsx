@@ -95,18 +95,6 @@ export const Footer = () => {
     }
   };
 
-  const handleResetPassword = async () => {
-    try {
-      const response = await resetPassword();
-      alert(response.message || 'Password berhasil direset');
-      toggleModal();
-    } catch (error) {
-      console.error('Reset Password Error:', error);
-      const errorMessage = error.response?.data?.message || 'Gagal mereset password.';
-      alert(errorMessage);
-    }
-  };
-
   const renderModal = () => {
     if (modalStage === 'password') {
       return (

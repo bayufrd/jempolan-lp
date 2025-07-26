@@ -3,8 +3,8 @@ module.exports = {
     apps: [
       {
         name: "jempolan-fe",
-        script: "npm",
-        args: "run build && npx serve -s build",
+        script: "npx",
+        args: "serve -s build -l 1234",
         env_production: {
           NODE_ENV: "production",
           PORT: 1234,

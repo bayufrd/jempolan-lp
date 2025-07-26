@@ -21,7 +21,6 @@ const iconMap = {
 export const Header = (props) => {
   // Safely extract data or use default empty arrays
   const socialLinks = props.data?.socialLinks || [];
-  const serviceLinks = props.data?.serviceLinks || [];
   return (
     <header id="header">
       <div className="intro">
