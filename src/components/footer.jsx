@@ -4,7 +4,6 @@ import {
   fetchSettings,
   verifyPassword,
   updateSettings,
-  resetPassword
 } from '../services/apiService';
 
 export const Footer = () => {
