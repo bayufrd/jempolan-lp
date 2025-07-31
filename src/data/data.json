@@ -1,4 +1,123 @@
 {
+  "SEO": {
+    "keywords_SEO": [
+      "coffee shop yogyakarta",
+      "cafe di jogja",
+      "tempat nongkrong kaliurang",
+      "coffee shop sleman",
+      "jempolan coffee",
+      "wisata kuliner jogja",
+      "cafe aesthetic jogja",
+      "tempat ngopi enak di jogja",
+      "destinasi wisata kuliner",
+      "tempat meeting di jogja",
+      "coffee shop instagramable",
+      "lokasi gathering terbaik",
+      "cafe dengan wifi cepat",
+      "spot foto kekinian",
+      "coffee shop dekat kampus",
+      "tempat nugas mahasiswa",
+      "coffee shop area kaliurang",
+      "cafe coworking space",
+      "tempat nongkrong anak uny",
+      "coffee shop dengan live music",
+      "venue acara kecil",
+      "tempat diskusi komunitas",
+      "cafe dengan konsep industrial",
+      "coffee shop ramah anak muda",
+      "tempat kencan romantis di jogja",
+      "lokasi workshop kreatif",
+      "cafe dengan menu special",
+      "tempat belajar bareng",
+      "coffee shop dengan suasana nyaman",
+      "destinasi wisata kuliner mahasiswa"
+    ],
+    "description_SEO": "Jempolan Coffee & Eatery - Destinasi Kuliner Terbaik di Jalan Kaliurang, Yogyakarta. Nikmati kopi berkualitas, suasana nyaman, dan spot aesthetic di cafe terbaik Condong Catur. Cocok untuk meeting, nugas, gathering, dan momen spesial Anda!",
+    "title_SEO": "Jempolan Coffee & Eatery - Coffee Shop Terbaik & Destinasi Wisata Kuliner Jogja",
+    "meta_tags": {
+      "local_keywords": [
+        "coffee shop dekat UGM",
+        "cafe area kampus",
+        "tempat nongkrong mahasiswa",
+        "spot foto kekinian jogja"
+      ],
+      "event_keywords": [
+        "venue acara kecil",
+        "tempat gathering",
+        "lokasi workshop",
+        "meeting point jogja"
+      ],
+      "target_audience": [
+        "mahasiswa",
+        "pekerja kreatif",
+        "pencinta kopi",
+        "komunitas",
+        "freelancer"
+      ]
+    },
+    "location_seo": {
+      "area": [
+        "Kaliurang",
+        "Condong Catur",
+        "Sleman",
+        "Yogyakarta"
+      ],
+      "nearby_landmarks": [
+        "Universitas Gadjah Mada",
+        "Universitas Negeri Yogyakarta",
+        "Kampus UPN",
+        "Kampus UII"
+      ]
+    },
+    "business_attributes": {
+      "specialties": [
+        "Kopi Lokal",
+        "Kopi Nusantara",
+        "Espresso Bar",
+        "Manual Brewing",
+        "Single Origin"
+      ],
+      "facilities": [
+        "Free WiFi",
+        "Stop Kontak",
+        "Area Outdoor",
+        "Area Indoor AC",
+        "Parkir Luas"
+      ],
+      "services": [
+        "Reservasi Acara",
+        "Catering",
+        "Private Room",
+        "Live Acoustic"
+      ]
+    },
+    "google_my_business_optimization": {
+      "business_type": [
+        "Coffee Shop",
+        "Cafe",
+        "Coworking Space",
+        "Event Venue"
+      ],
+      "operation_hours": {
+        "weekdays": "09:00 - 23:00",
+        "weekends": "09:00 - 24:00"
+      },
+      "price_range": "$",
+      "payment_methods": [
+        "Cash",
+        "Transfer",
+        "QRIS",
+        "E-Wallet"
+      ]
+    },
+    "social_media_keywords": [
+      "#JempolanCoffee",
+      "#CoffeeshopJogja",
+      "#WisataMakan",
+      "#NongkrongJogja",
+      "#KulinerJogja"
+    ]
+  },
   "Header": {
     "title": "Welcome #sobatjeco",
     "paragraph": "Operational Hours: Mon-Sun 09.00 - 23.59 & Fri 13.00 - 23.59",

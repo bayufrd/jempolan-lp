@@ -10,7 +10,7 @@ import { fetchSettings } from "./services/apiService";
 import JsonData from "./data/data.json";
 import "./App.css";
 
-// Impor halaman tambahan
+// Import halaman tambahan
 import CMSPage from "./pages/CMS";
 import CRMPage from "./pages/CRM";
 
@@ -19,12 +19,12 @@ const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
   const [landingPageData, setLandingPageData] = useState({});
   const [appSettings, setAppSettings] = useState({
-    showFloatButton: false, // Ganti dari showSidebar
+    showFloatButton: false,
     isDeveloperMode: false
   });
   const [isLoading, setIsLoading] = useState(true);
 
-  // Effect untuk inisialisasi aplikasi
+  // Effect untuk inisialisasi aplikasi dan update metadata dinamis
   useEffect(() => {
     const initializeApp = async () => {
       try {
@@ -38,6 +38,9 @@ const App = () => {
 
         setLandingPageData(JsonData);
         setIsLoading(false);
+
+        // Update metadata berdasarkan halaman
+        updatePageMetadata(currentPage);
       } catch (error) {
         console.error("Error initializing app:", error);
 
@@ -54,6 +57,46 @@ const App = () => {
     initializeApp();
   }, []);
 
+  // Fungsi untuk update metadata berdasarkan halaman
+  const updatePageMetadata = (page) => {
+    // Ambil data SEO dari JsonData untuk konsistensi
+    const seoData = JsonData.SEO || {};
+  
+    const metadataMap = {
+      'home': {
+        title: seoData.title_SEO || "Jempolan Coffee & Eatery - Coffee Shop Jogja",
+        description: seoData.description_SEO || "Selamat datang di Jempolan Coffee & Eatery, tempat nongkrong asyik di Jogja",
+        keywords: seoData.keywords_SEO ? seoData.keywords_SEO.join(', ') : "coffee shop home, jempolan coffee beranda"
+      },
+      'cms': {
+        title: "CMS - Jempolan Coffee & Eatery",
+        description: "Halaman Manajemen Konten Jempolan Coffee & Eatery",
+        keywords: "cms, manajemen konten"
+      },
+      'crm': {
+        title: "CRM - Jempolan Coffee & Eatery",
+        description: "Halaman Customer Relationship Management Konten Jempolan Coffee & Eatery",
+        keywords: "crm, customer relationship management"
+      }
+    };
+  
+    const pageMetadata = metadataMap[page] || metadataMap['home'];
+    
+    // Update meta tags
+    document.title = pageMetadata.title;
+    
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.content = pageMetadata.description;
+    
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) metaKeywords.content = pageMetadata.keywords;
+  };
+
+  // Effect untuk update metadata saat halaman berubah
+  useEffect(() => {
+    updatePageMetadata(currentPage);
+  }, [currentPage]);
+
   // Render halaman berdasarkan state currentPage
   const renderPage = () => {
     switch (currentPage) {
@@ -68,7 +111,7 @@ const App = () => {
         );
       case 'cms':
         return <CMSPage />;
-      case 'contact':
+      case 'crm':
         return <CRMPage />;
       default:
         return null;
